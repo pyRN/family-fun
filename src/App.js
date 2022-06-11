@@ -1,23 +1,26 @@
-import logo from './logo.svg';
+import {Route, BrowserRouter, Routes} from "react-router-dom"
+import "bootstrap/dist/css/bootstrap.min.css";
 import './App.css';
+
+//Componnents
+import LandingPage from "./components/LandingPage/LandingPageContainer"
+import TicTacToeContainer from "./components/TicTacToe/TicTacToeContainer"
+import PaperRockScissorsContainer from "./components/PaperRockScissors/PaperRockScissorsContainer"
+import ConnectFourContainer from "./components/ConnectFour/ConnectFourContainer"
+import SimonSaysContainer from "./components/SimonSays/SimonSaysContainer"
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/tic_tac_toe" element={<TicTacToeContainer />} />
+          <Route path="/paper_rock_scissors" element={<PaperRockScissorsContainer />} />
+          <Route path="/connect_four" element={<ConnectFourContainer />} />
+          <Route path="/simon_says" element={<SimonSaysContainer />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
