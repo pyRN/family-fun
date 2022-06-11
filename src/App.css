@@ -1,0 +1,55 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--gray);
+}
+
+.title-container {
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  margin: 0;
+  height: 50px;
+  font-size: 25pt;
+}
+
+/*Landing Page Styles*/
+.games-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.game-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--tertiary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 8px;
+  margin: 10px;
+  text-align: center;
+  word-wrap: break-word;
+  font-size: 20pt;
+  cursor: pointer;
+  width: 300px;
+  height: 300px;
+}
+
+.game-card:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+@media screen and (max-width: 650px) {
+  .games-container {
+    flex-direction: column;
+  }
+}
