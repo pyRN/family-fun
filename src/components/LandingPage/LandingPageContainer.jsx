@@ -21,16 +21,16 @@ const LandingPageContainer = () => {
     },
   ];
   return (
-    <div className="container">
+    <div className="flex-column container">
       <div className="title-container">
-        <h1 className="text-center">Travel Fun</h1>
+        <h1>Travel Fun</h1>
       </div>
 
-      <div className="games-container">
+      <div className="flex-row games-container">
         {aGames.map((oGame) => {
           return (
             <div
-              className="game-card"
+              className="flex-column flex-center game-card"
               key={oGame.sTitle}
               onClick={() => fnNavigate(oGame.sPath)}
             >
